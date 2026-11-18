@@ -1,0 +1,461 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #101010;
+    color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    width: 100%;
+    min-height: 115px;
+    padding: 10px 7%;
+    background: #080808;
+    border-bottom: 2px solid #c90020;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 130px;
+    height: 95px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.marca h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.marca span {
+    color: #e00025;
+    font-size: 11px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.cabecalho nav span {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 55px auto;
+}
+
+.apresentacao {
+    margin-bottom: 35px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #ff304b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.apresentacao h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    margin-bottom: 15px;
+}
+
+.apresentacao h2 span {
+    color: #e00025;
+}
+
+.apresentacao > p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+/* INFORMAÇÕES DA EMPRESA */
+
+.info-empresa {
+    display: flex;
+    gap: 35px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info-icone {
+    background: #251116;
+    border: 1px solid #641020;
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.info-item strong,
+.info-item small {
+    display: block;
+}
+
+.info-item strong {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.info-item small {
+    color: #888;
+    font-size: 11px;
+}
+
+/* FORMULÁRIO */
+
+.formulario-container {
+    background: #191919;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.formulario-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.formulario-titulo h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.formulario-titulo p {
+    color: #888;
+    font-size: 12px;
+}
+
+.icone-formulario {
+    font-size: 30px;
+    background: #291016;
+    padding: 13px;
+    border-radius: 12px;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+
+.secao-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    margin: 30px 0 20px;
+}
+
+.secao-titulo span {
+    background: #d00025;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+/* CAMPOS */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 0;
+}
+
+.campo label {
+    font-size: 12px;
+    color: #ddd;
+    font-weight: 600;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 14px;
+    background: #101010;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 7px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.campo input::placeholder {
+    color: #666;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #e00025;
+    box-shadow: 0 0 0 3px rgba(224, 0, 37, 0.12);
+}
+
+.campo select option {
+    background: #191919;
+    color: white;
+}
+
+/* ORGANIZAÇÃO DOS CAMPOS */
+
+.linha-campos {
+    display: flex;
+    gap: 20px;
+}
+
+.campo-numero {
+    max-width: 200px;
+}
+
+/* ESTADO E CEP */
+
+#estado {
+    text-transform: uppercase;
+}
+
+#cep {
+    letter-spacing: 1px;
+}
+
+/* TURNOS */
+
+.opcoes-turno {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.opcao {
+    flex: 1;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.opcao input {
+    position: absolute;
+    opacity: 0;
+}
+
+.opcao span {
+    display: block;
+    padding: 14px;
+    text-align: center;
+    background: #101010;
+    border: 1px solid #444;
+    border-radius: 7px;
+    color: #ccc;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.opcao input:checked + span {
+    background: #351019;
+    border-color: #e00025;
+    color: #fff;
+}
+
+.opcao:focus-within span {
+    outline: 2px solid #ff304b;
+    outline-offset: 3px;
+}
+
+/* AVISO */
+
+.aviso {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin: 25px 0;
+    background: #121d20;
+    border: 1px solid #263d42;
+    border-radius: 7px;
+    color: #a9c4c8;
+    font-size: 11px;
+}
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botoes button {
+    padding: 14px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-limpar {
+    background: transparent;
+    color: #ccc;
+    border: 1px solid #555;
+}
+
+.btn-limpar:hover {
+    background: #303030;
+}
+
+.btn-cadastrar {
+    background: #d00025;
+    color: white;
+    border: 1px solid #d00025;
+}
+
+.btn-cadastrar:hover {
+    background: #a9001e;
+    transform: translateY(-2px);
+}
+
+/* MENSAGENS */
+
+.mensagem {
+    display: none;
+    margin-top: 20px;
+    padding: 17px;
+    border-radius: 7px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.mensagem.sucesso {
+    display: block;
+    background: #13291d;
+    border: 1px solid #267b45;
+    color: #9cebb6;
+}
+
+.mensagem.erro {
+    display: block;
+    background: #351319;
+    border: 1px solid #a83242;
+    color: #ffadb7;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #080808;
+    border-top: 1px solid #292929;
+    color: #777;
+    font-size: 11px;
+    line-height: 2;
+}
+
+footer span {
+    color: #c90020;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        padding: 10px 5%;
+    }
+
+    .cabecalho nav {
+        display: none;
+    }
+
+    .logo {
+        width: 105px;
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 35px auto;
+    }
+
+    .formulario-container {
+        padding: 22px 17px;
+    }
+
+    .linha-campos {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .campo-numero {
+        max-width: 100%;
+    }
+
+    .info-empresa {
+        gap: 20px;
+    }
+
+    .opcoes-turno {
+        flex-direction: column;
+    }
+
+    .opcao {
+        width: 100%;
+    }
+
+    .botoes {
+        flex-direction: column-reverse;
+    }
+
+    .botoes button {
+        width: 100%;
+    }
+}
